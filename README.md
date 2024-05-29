@@ -1,10 +1,6 @@
 # AI Code Checker for GitLab CI/CD
 
-This repository hosts a project that integrates an AI code reviewer into GitLab's CI/CD pipeline. 
-
-The AI code checker utilizes the OpenAI API to review code changes in merge requests and post comments directly on the merge request.
-
-Future goal would be to also have a github CI/CD integration.
+This repository hosts a project that integrates an AI code reviewer into GitLab's CI/CD pipeline. The AI code checker utilizes the OpenAI API to review code changes in merge requests and post comments directly on the merge request.
 
 ## Table of Contents
 
@@ -26,7 +22,6 @@ Future goal would be to also have a github CI/CD integration.
 - Automatically extracts code changes from GitLab merge requests.
 - Queries OpenAI API for code review based on team and project-specific style guides.
 - Posts AI-generated code review comments directly on the merge request.
-- BONUS : automatically propose changes.
 
 ## Setup
 
@@ -62,7 +57,16 @@ Future goal would be to also have a github CI/CD integration.
 ## Usage
 
 1. **Extract code changes and generate review**:
-    Run the script to fetch code changes from a specific merge request and generate a review:
+    Run the script to fetch code changes from a specific merge request and generate a review. You can either set the project ID and merge request IID as environment variables or pass them as arguments to the script.
+
+    **Using environment variables**:
+    ```bash
+    export CI_PROJECT_ID=your_project_id
+    export CI_MERGE_REQUEST_IID=your_merge_request_iid
+    python main.py
+    ```
+
+    **Using command-line arguments**:
     ```bash
     python main.py --project_id YOUR_PROJECT_ID --merge_request_iid YOUR_MERGE_REQUEST_IID
     ```
