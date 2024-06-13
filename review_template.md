@@ -1,15 +1,13 @@
-fill the following review report with your comments and suggestions from the changes.
-Your suggestions must be clear and precise and point which file on which line.
-follow this format : file.ts - you should change A with B because C
-for each suggestion provide a code snippet of what you want to change and why.
-follow this format : 
-before:
-```code snippet of how it is in the PR ```
-after
-```code snippet of the proposed change`` 
-Your comments must be about precise and real issues
-Your comments must help resolve an issue that could help respect best practices and avoid common pitfalls
-Your comments must be useful and clearly understandable by a developer.
+- Fill in the following review report with your comments and suggestions based on the provided changes.
+- Ensure your suggestions are clear, precise, and specify the file and line number.
+- Provide a code snippet for each suggested change, following this format:
+  - Before:
+    ```code snippet of how it is in the PR```
+  - After:
+    ```code snippet of the proposed change```
+- Focus on significant issues or bad practices; avoid nitpicks.
+- Ensure your comments are useful and easily understandable by a developer.
+- Do not comment on import statements.
 
 # Code Review Report
 

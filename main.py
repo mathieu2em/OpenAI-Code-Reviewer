@@ -92,7 +92,10 @@ def get_code_review(formatted_changes, template, project_id, merge_request_iid):
 
     for i, batch in enumerate(batches):
         print(f"Processing batch {i+1}/{len(batches)} with {len(batch)} chunks...")
-        messages = [{"role": "system", "content": "You are an experienced programmer and you are asked to provide a clear and concise code review of the following changes."}]
+        messages = [{
+  "role": "system",
+  "content": "You are an experienced programmer tasked with providing a clear, concise, and actionable code review of the following changes. Your review should identify significant issues, avoid nitpicks, and offer specific, useful suggestions for improvement."
+}]
 
         for chunk in batch:
             messages.append({"role": "user", "content": chunk})
